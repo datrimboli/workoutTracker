@@ -14,7 +14,7 @@ router.post('/workouts', (req, res) => {
   Workout.create(req.body)
     // .then(workout => {
     //   User.findByIdAndUpdate(item.user, { $push: { items: item._id } })
-    .then(() => res.json(workout))
+    .then((workout) => res.json(workout))
     .catch(err => console.log(err))
 })
 //     .catch(err => console.log(err))
@@ -22,7 +22,7 @@ router.post('/workouts', (req, res) => {
 
 // PUT one workout
 router.put('/workouts/:id', (req, res) => {
-  Workout.findByIdAndUpdate(req.params.id, req.body)
+  Workout.findByIdAndUpdate(req.params.id, { $push: { exercises: req.body } })
     .then(() => res.sendStatus(200))
     .catch(err => console.log(err))
 })

@@ -2,33 +2,33 @@ const { model, Schema } = require('mongoose')
 
 const Workout = new Schema({
   day: {
-    type: String,
-    required: true
+    type: Date,
+    default: Date.now
   },
   exercises: [{
-  name: {
-    type: String,
-    required: true
-  },
-  type: {
-    type: Number,
-    required: true
-  },
-  weight: {
-    type: Number
-   },
-  sets: {
-    type: Number
+    name: {
+      type: String,
+      required: true
     },
-  reps: {
-    type: Number
+    type: {
+      type: String,
+      required: true
     },
-  duration: {
-    type: Number,
-    required: true
-  },
-  distance: {
-    type: Number
+    weight: {
+      type: Number
+    },
+    sets: {
+      type: Number
+    },
+    reps: {
+      type: Number
+    },
+    duration: {
+      type: Number,
+      required: true
+    },
+    distance: {
+      type: Number
     },
   }]
 }, { timestamps: true })
