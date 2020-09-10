@@ -1,19 +1,36 @@
 const { model, Schema } = require('mongoose')
 
 const Exercise = new Schema({
-  text: {
+  name: {
     type: String,
     unique: true,
     required: true
   },
-  isDone: {
-    type: Boolean,
+  type: {
+    type: Number,
+    unique: true,
     required: true
   },
-  user: {
-    type: Schema.Types.ObjectId,
-    ref: 'User'
-  }
+  weight: {
+    type: Number,
+    unique: true,
+    required: true
+  },
+  sets: {
+    type: Number,
+    unique: true,
+    required: true
+  },
+  reps: {
+    type: Number,
+    unique: true,
+    required: true
+  },
+  duration: {
+    type: Number,
+    unique: true,
+    required: true
+  },
 }, { timestamps: true })
 
 module.exports = model('Exercise', Exercise)
