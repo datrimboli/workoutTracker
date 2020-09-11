@@ -1,5 +1,7 @@
+// Bringing in mongoose
 const { model, Schema } = require('mongoose')
 
+// Exercise variables
 const Workout = new Schema({
   day: {
     type: Date,
@@ -33,4 +35,5 @@ const Workout = new Schema({
   }]
 }, { timestamps: true })
 
+// Exporting Workout variable
 module.exports = model('Workout', Workout)
