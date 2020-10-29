@@ -8,3 +8,4 @@ This app allows the user to track their fitness regiments and keep track of thei
 
 ![Screenshot](./public/screenshots/workout1.png)
 ![Screenshot](./public/photos/screenshot/burgers.png)
+![Screenshot](./public/photos/screenshot/burgers.png)
